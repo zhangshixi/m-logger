@@ -1,5 +1,6 @@
 package com.mlogger.support;
 
+import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 public class Log4jLoggerSupport implements com.mlogger.Logger {
@@ -27,12 +28,12 @@ public class Log4jLoggerSupport implements com.mlogger.Logger {
 	
 	@Override
 	public boolean isWarnEnabled() {
-		return false;
+		return _log.isEnabledFor(Level.WARN);
 	}
 	
 	@Override
 	public boolean isErrorEnabled() {
-		return false;
+	    return _log.isEnabledFor(Level.ERROR);
 	}
 	
 	@Override
