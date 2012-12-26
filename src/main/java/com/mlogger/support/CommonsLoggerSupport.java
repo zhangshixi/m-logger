@@ -50,7 +50,7 @@ public class CommonsLoggerSupport implements Logger {
 	
 	@Override
 	public void info(String message) {
-		_log.info(message);
+		_log.debug(message);
 	}
 	
 	@Override
@@ -64,8 +64,8 @@ public class CommonsLoggerSupport implements Logger {
 	}
 
 	@Override
-	public void error(String message, Throwable ex) {
-		_log.error(message, ex);
+	public void error(String message, Throwable cause) {
+		_log.error(message, cause);
 	}
 
 }

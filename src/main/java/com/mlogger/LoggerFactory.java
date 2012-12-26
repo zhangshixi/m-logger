@@ -46,7 +46,7 @@ public class LoggerFactory {
         try {
             candidate = loggerClazz.getConstructor(new Class[] { Class.class });
             Logger logger = candidate.newInstance(new Object[] { LoggerFactory.class });
-            logger.info("Logging initialized using '" + loggerClazz.getName() + "' adapter.");
+            logger.debug("Logging initialized using '" + loggerClazz.getName() + "' adapter.");
         } catch (Throwable t) {
             throw new LoggerException("Error setting Logger implementation. Cause: " + t, t);
         }

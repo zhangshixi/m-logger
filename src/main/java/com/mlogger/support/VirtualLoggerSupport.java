@@ -53,7 +53,7 @@ public class VirtualLoggerSupport implements Logger {
 	}
 	
 	@Override
-	public void error(String message, Throwable ex) {
+	public void error(String message, Throwable cause) {
 	}
 
 }

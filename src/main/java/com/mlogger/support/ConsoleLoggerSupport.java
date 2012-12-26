@@ -68,10 +68,10 @@ public class ConsoleLoggerSupport implements Logger {
 	}
 
 	@Override
-	public void error(String message, Throwable ex) {
+	public void error(String message, Throwable cause) {
 		System.err.println(buildMessage(message, Level.ERROR));
-		if (ex != null) {
-			ex.printStackTrace(System.err);
+		if (cause != null) {
+			cause.printStackTrace(System.err);
 		}
 	}
 	

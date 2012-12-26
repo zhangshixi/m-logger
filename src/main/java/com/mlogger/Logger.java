@@ -22,6 +22,6 @@ public interface Logger {
 
 	public void error(String message);
 
-	public void error(String message, Throwable ex);
+	public void error(String message, Throwable cause);
 
 }

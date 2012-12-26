@@ -62,8 +62,8 @@ public class Jdk14LoggerSupport implements com.mlogger.Logger {
 	}
 
 	@Override
-	public void error(String message, Throwable ex) {
-		_log.log(Level.SEVERE, message, ex);
+	public void error(String message, Throwable cause) {
+		_log.log(Level.SEVERE, message, cause);
 	}
 	
 }

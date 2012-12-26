@@ -62,8 +62,8 @@ public class Slf4jLoggerSupport implements com.mlogger.Logger {
 	}
 
 	@Override
-	public void error(String message, Throwable ex) {
-		_log.error(message, ex);
+	public void error(String message, Throwable cause) {
+		_log.error(message, cause);
 	}
 
 }

@@ -46,5 +46,11 @@ public class Loggers {
             _logger.error(ReplaceHolder.replaceArgs(message, params));
         }
     }
+    
+    public void error(String message, Throwable cause, Object... params) {
+    	if (message != null && _logger.isErrorEnabled()) {
+    		_logger.error(ReplaceHolder.replaceArgs(message, params), cause);
+    	}
+    }
 
 }
