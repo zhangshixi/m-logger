@@ -57,6 +57,8 @@
 				<version>2.3.2</version>
 				<configuration>
 					<tagBase>https://github.com/zhangshixi/m-logger/tags</tagBase>
+					<username>zhangshixi</username>
+					<password>she3t6net6hv3</password>
 				</configuration>
 			</plugin>
 		</plugins>
