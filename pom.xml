@@ -44,27 +44,19 @@
 	</dependencies>
 	
 	<scm>
-		<url>https://github.com/zhangshixi/m-logger</url>
-		<connection>https://github.com/zhangshixi/m-logger.git</connection>
-		<developerConnection>https://github.com/zhangshixi/m-logger.git</developerConnection>
+		<url>scm:git:https://github.com/zhangshixi/m-logger.git</url>
+		<connection>scm:git:https://github.com/zhangshixi/m-logger.git</connection>
+		<developerConnection>scm:git:https://github.com/zhangshixi/m-logger.git</developerConnection>
 	</scm>
 	
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-scm-plugin</artifactId>
-				<version>1.8.1</version>
-				<configuration>
-					<connectionType>connection</connectionType>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
 				<version>2.3.2</version>
 				<configuration>
-					<tagNameFormat>v{project.version}</tagNameFormat>
+					<tagBase>https://github.com/zhangshixi/m-logger/tags</tagBase>
 				</configuration>
 			</plugin>
 		</plugins>
