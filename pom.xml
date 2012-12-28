@@ -1,13 +1,48 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.michael</groupId>
 	<artifactId>m-logger</artifactId>
-	<version>1.1-SNAPSHOT</version>
+	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>m-logger</name>
+	<description>Java dynamic logger face</description>
 	<url>https://github.com/zhangshixi/m-logger</url>
+	<inceptionYear>2012</inceptionYear>
+
+	<developers>
+		<developer>
+			<id>Michael</id>
+			<name>Zhang Shixi</name>
+			<email>xishizhang@gmail.com</email>
+			<organization>fclub</organization>
+			<roles>
+				<role>designer</role>
+				<role>developer</role>
+			</roles>
+			<url>http://m-toolkit.googlecode.com/svn/trunk/m-toolkit/</url>
+			<timezone>+8</timezone>
+		</developer>
+	</developers>
+
+	<organization>
+		<name>Zhang Shixi</name>
+		<url>https://github.com/zhangshixi</url>
+	</organization>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
+		</license>
+	</licenses>
+
+	<issueManagement>
+		<system>jira</system>
+		<url>https://github.com/zhangshixi/m-logger/issues</url>
+	</issueManagement>
 
 	<properties>
 		<slf4j.version>1.7.2</slf4j.version>
@@ -42,7 +77,7 @@
 
 	<scm>
 		<tag>HEAD</tag>
-		<url>scm:git:https://github.com/zhangshixi/m-logger.git</url>
+		<url>https://github.com/zhangshixi/m-logger</url>
 		<connection>scm:git:https://github.com/zhangshixi/m-logger.git</connection>
 		<developerConnection>scm:git:https://github.com/zhangshixi/m-logger.git</developerConnection>
 	</scm>
@@ -51,9 +86,18 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-plugin</artifactId>
+				<version>1.8.1</version>
+				<configuration>
+					<connectionType>connection</connectionType>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
 				<version>2.4</version>
 				<configuration>
+					<tagNameFormat>v{project.version}</tagNameFormat>
 					<tagBase>https://github.com/zhangshixi/m-logger/tags</tagBase>
 					<username>${git.username}</username>
 					<password>${git.password}</password>
